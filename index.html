@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ana's Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form</h1>
+      <form id="form" class="form">
+        <div class="name-group">
+          <label for="name">Name:</label>
+          <input class="input name" id="name" type="text" />
+        </div>
+
+        <div class="email-group">
+          <label for="email">Email:</label>
+          <input class="input email" id="email" type="email" required />
+        </div>
+
+        <div class="pass-group">
+          <label for="pass">Password:</label>
+          <input
+            class="input password pass"
+            id="pass"
+            type="password"
+            required
+          />
+        </div>
+
+        <div class="pass-group">
+          <label for="pass_confirm">Confirm Password:</label>
+          <input
+            class="input password pass_confirm"
+            id="pass_confirm"
+            type="password"
+            required
+          />
+          <span id="message" style="color: red"> </span>
+        </div>
+
+        <div class="gender-group">
+          <label for="gender">Gender:</label>
+          <div class="gender-container">
+            <div class="gender radio-btn">
+              <input type="radio" name="gender" value="female" id="female" />
+              <input type="radio" name="gender" value="male" id="male" />
+              <input type="radio" name="gender" value="other" id="other" />
+            </div>
+            <div class="gender">
+              <label for="female">Female</label>
+              <label for="male">Male</label>
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="interests-group">
+          <label for="interests">Interests:</label>
+          <div class="interests-container">
+            <div class="interests checkbox-btn">
+              <input
+                type="checkbox"
+                name="interest"
+                value="sports"
+                id="sports"
+              />
+              <input type="checkbox" name="interest" value="music" id="music" />
+              <input
+                type="checkbox"
+                name="interest"
+                value="travel"
+                id="travel"
+              />
+            </div>
+            <div class="interests">
+              <label for="sports">Sports</label>
+              <label for="music">Music</label>
+              <label for="travel">Travel</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="country-group">
+          <label for="country">Country:</label>
+          <div class="country">
+            <select name="country" id="country">
+              <option value="georgia">Georgia</option>
+              <option value="usa">USA</option>
+              <option value="switzerland">Switzerland</option>
+              <option value="uk">UK</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="value-group">
+          <label for="value">Choose a value:</label>
+          <div class="range">
+            <input
+              class="range-input"
+              type="range"
+              id="rangeInput"
+              min="0"
+              max="100"
+              oninput="rangeVal.innerText = this.value"
+            />
+            <p id="rangeVal">50</p>
+          </div>
+        </div>
+        <button type="submit" class="button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
